@@ -8,17 +8,7 @@ You work at a startup that is building a new and disruptive platform called Fint
 
 In this Challenge, you will complete the code that enables your customers to send cryptocurrency payments to fintech professionals. To develop the code and test it out, you will assume the perspective of a Fintech Finder customer who is using the application to find a fintech professional and pay them for their work.
 
-### What You're Creating
-
-To complete this Challenge, you will use two Python files, both of which are contained in the starter folder.
-
-The first file that you will use is called `fintech_finder.py`. It contains the code associated with the web interface of your application. The code included in this file is compatible with the Streamlit library. You will write all of your code for this Challenge in this file.
-
-The second file that you will use is called `crypto_wallet.py`. This file contains the Ethereum transaction functions that you have created throughout this module’s lessons. By using import statements, you will integrate the `crypto_wallet.py` Python script into the Fintech Finder interface program that is found in the `fintech_finder.py` file.
-
-Integrating these two files will allow you to automate the tasks associated with generating a digital wallet, accessing Ethereum account balances, and signing and sending transactions via a personal Ethereum blockchain called Ganache.
-
-Specifically, you will assume the perspective of a Fintech Finder customer in order to do the following:
+Specific tasks:
 
 * Generate a new Ethereum account instance by using the mnemonic seed phrase provided by Ganache.
 
@@ -30,21 +20,9 @@ Specifically, you will assume the perspective of a Fintech Finder customer in or
 
 * Review the transaction hash code associated with the validated blockchain transaction.
 
-Once you receive the transaction’s hash code, you will navigate to the Transactions section of Ganache to review the blockchain transaction details. To confirm that you have successfully created the transaction, you will save screenshots to the README.md file of your GitHub repository for this Challenge assignment.
+Once you receive the transaction’s hash code, you will navigate to the Transactions section of Ganache to review the blockchain transaction details. To confirm that you have successfully created the transaction, screenshots will be attached below.
 
-### Instructions
-
-The steps for this challenge are broken out into the following sections:
-
-* Import Ethereum Transaction Functions into the Fintech Finder Application
-* Sign and Execute a Payment Transaction
-* Inspect the Transaction on Ganache
-
-#### Step 1: Import Ethereum Transaction Functions into the Fintech Finder Application
-
-In this section, you'll import several functions from the `crypto_wallet.py` script into the file `fintech_finder.py`, which contains code for Fintech Finder’s customer interface, in order to add wallet operations to the application. For this section, you will assume the perspective of a Fintech Finder customer (i.e., you’ll provide your Ethereum wallet and account information to the application).
-
-Complete the following steps:
+#### Step 1: 
 
 1. Review the code contained in the `crypto_wallet.py` script file. Note that the Ethereum transaction functions that you have built throughout this module&mdash;including `wallet`, `wallet.derive_acount`, `get_balance`, `fromWei`, `estimateGas`, `sendRawTransaction`, and others&mdash;have now been incorporated into Python functions that allow you to automate the process of accessing them.
 
@@ -63,12 +41,6 @@ Complete the following steps:
 5. Within this same section of the `fintech_finder.py` file, define a new `st.sidebar.write` function that will display the balance of the customer’s account. Inside this function, call the `get_balance` function and pass it your Ethereum `account.address`.
 
 #### Step 2: Sign and Execute a Payment Transaction
-
-Next, you'll write the code that will calculate a fintech professional’s wage, in ether, based on the worker’s hourly rate and the number of hours that they work for a customer. (The fintech professionals’ hourly rates are provided in the `candidate_database` that is found in `fintech_finder.py`.)
-
-You will then write code that uses the calculated wage value to send a transaction that pays the worker. This code should allow the Fintech Finder customer to authorize the transaction with their digital signature. For the purpose of testing out this application, you will use your own Ethereum account information as the customer account information.
-
-To accomplish all of this, complete the following steps:
 
 1. Fintech Finder customers will select a fintech professional from the application interface’s drop-down menu, and then input the amount of time for which they’ll hire the worker. Code the application so that once a customer completes these steps, the application will calculate the amount that the worker will be paid in ether. To do so, complete the following steps:
 
@@ -106,16 +78,9 @@ Now it's time to put it all together and test the Fintech Finder application wit
 
 5. Return to the original transaction, and click the transaction’s To address.
 
-* Take a screenshot of the recipient’s address balance and history from your Ganache application. Save this screenshot to the README.md file of your GitHub repository for this Challenge assignment.
+* Take a screenshot of the recipient’s address balance and history from your Ganache application
 
----
+![ganache screenshot 3](https://user-images.githubusercontent.com/98990090/180098357-f308b9cd-8b07-4772-b02f-1889d019709b.png) <br>
+![ganache screenshot 1](https://user-images.githubusercontent.com/98990090/180098358-fd4f3175-6aba-42ca-ab4b-37144b0aea31.png) <br>
+![ganache screenshot 2](https://user-images.githubusercontent.com/98990090/180098356-ba08d396-a60d-406c-9dbf-ba276812db10.png) <br>
 
-## Submission
-
-* Upload the files for this assignment to your GitHub repository.
-
-* Submit the link to your GitHub repo on Bootcamp Spot.
-
----
-
-© 2021 Trilogy Education Services, a 2U, Inc. brand. All Rights Reserved.
